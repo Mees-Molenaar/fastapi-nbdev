@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "fastapi-nbdev"
+  site-url: "https://MeesMolenaar.github.io/fastapi-nbdev"
+  description: "Proof of concept of using FastAPI with Nbdev"
+  repo-branch: main
+  repo-url: "https://github.com/MeesMolenaar/fastapi-nbdev"
