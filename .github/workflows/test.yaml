@@ -1,5 +1,24 @@
+# based on: https://github.com/fastai/workflows/blob/master/nbdev-ci/action.yml
+
 name: CI
 on: [workflow_dispatch, pull_request, push]
+inputs:
+  pre:
+    description: "Install prerelease nbdev/execnb from master?"
+    required: false
+    default: ""
+  version:
+    description: "Version of python to set up"
+    required: false
+    default: "3.9"
+  skip_test:
+    description: "Skip tests?"
+    required: false
+    default: ""
+  flags:
+    description: "Space separated list of nbdev test flags to run that are normally ignored"
+    required: false
+    default: ""
 
 jobs:
   test:
