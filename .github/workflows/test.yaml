@@ -1,7 +1,6 @@
 # based on: https://github.com/fastai/workflows/blob/master/nbdev-ci/action.yml
 
 name: CI
-on: [workflow_dispatch, pull_request, push]
 inputs:
   pre:
     description: "Install prerelease nbdev/execnb from master?"
@@ -20,6 +19,7 @@ inputs:
     required: false
     default: ""
 
+on: [workflow_dispatch, pull_request, push]
 jobs:
   test:
     runs-on: ubuntu-latest
