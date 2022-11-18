@@ -5,4 +5,6 @@ d = { 'settings': { 'branch': 'main',
                 'doc_host': 'https://MeesMolenaar.github.io',
                 'git_url': 'https://github.com/MeesMolenaar/fastapi-nbdev',
                 'lib_path': 'fastapi_nbdev'},
-  'syms': {'fastapi_nbdev.core': {'fastapi_nbdev.core.foo': ('core.html#foo', 'fastapi_nbdev/core.py')}}}
+  'syms': { 'fastapi_nbdev.main': {'fastapi_nbdev.main.root': ('main.html#root', 'fastapi_nbdev/main.py')},
+            'fastapi_nbdev.routers.aroute': { 'fastapi_nbdev.routers.aroute.artoue': ( 'routers/aroute.html#artoue',
+                                                                                       'fastapi_nbdev/routers/aroute.py')}}}
