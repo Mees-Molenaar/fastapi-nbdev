@@ -52,8 +52,8 @@ jobs:
             git diff
             exit 1;
           fi
-          echo "Start API"
-          uvicorn fastapi_nbdev.main:app
+          echo "Start API in deamon mode"
+          uvicorn fastapi_nbdev.main:app -D
           if [ ! $SKIP_TEST ]; then
             nbdev_test --flags "$FLAGS"
           fi
