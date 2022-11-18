@@ -2,9 +2,9 @@ name: CI
 on: [workflow_dispatch, pull_request, push]
 
 jobs:
+  using: "composite"
   test:
     runs-on: ubuntu-latest
-    using: "composite"
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v4
