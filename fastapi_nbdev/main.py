@@ -7,13 +7,13 @@ __all__ = ['app', 'root']
 from fastapi import FastAPI
 from .routers import aroute
 
-# %% ../nbs/00_main.ipynb 4
+# %% ../nbs/00_main.ipynb 5
 app = FastAPI()
 
-# %% ../nbs/00_main.ipynb 5
+# %% ../nbs/00_main.ipynb 6
 app.include_router(aroute.router)
 
-# %% ../nbs/00_main.ipynb 6
+# %% ../nbs/00_main.ipynb 7
 @app.get("/")
 async def root():
     return {"message": "Hello World"}

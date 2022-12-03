@@ -6,5 +6,5 @@ d = { 'settings': { 'branch': 'main',
                 'git_url': 'https://github.com/MeesMolenaar/fastapi-nbdev',
                 'lib_path': 'fastapi_nbdev'},
   'syms': { 'fastapi_nbdev.main': {'fastapi_nbdev.main.root': ('main.html#root', 'fastapi_nbdev/main.py')},
-            'fastapi_nbdev.routers.aroute': { 'fastapi_nbdev.routers.aroute.artoue': ( 'routers/aroute.html#artoue',
+            'fastapi_nbdev.routers.aroute': { 'fastapi_nbdev.routers.aroute.aroute': ( 'routers/aroute.html#aroute',
                                                                                        'fastapi_nbdev/routers/aroute.py')}}}

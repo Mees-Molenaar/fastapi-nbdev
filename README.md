@@ -18,12 +18,17 @@ git clone https://github.com/MeesMolenaar/fastapi-nbdev.git
 ## Running the Application
 
 Whenever you change main, a route or add a route. You will have to run
-`nbdev_prepare` so that your package is updated.
+`nbdev_export` so that your package is updated.
 
-> nbdev_prepare: Export, test, and clean notebooks, and render README if
-> needed
+> nbdev_export: Export notebooks in `path` to Python modules
 
 After running above comamand, you can start the FastAPI app with the
 following command from the root folder (i.e. fastapi-nbdev):
 
 > uvicorn fastapi_nbdev.main:app –reload
+
+Lastly, run `nbdev_prepare`. This is last, since you want to export and
+run your changes before running the tests.
+
+> nbdev_prepare: Export, test, and clean notebooks, and render README if
+> needed
