@@ -1,0 +1,44 @@
+[
+  {
+    "objectID": "main.html",
+    "href": "main.html",
+    "title": "main",
+    "section": "",
+    "text": "FastAPI\nCreating a FastAPI is quite straightforward by instantiating a FastAPI class. Then we can create a route via a (decorator)[https://realpython.com/primer-on-python-decorators/].\nAn other method to add routes is via a Router. With a Router it is easier to structure your routes in different routers. For example, you can have a User router and an Admin router to create a clear seperation of boundaries.\nIn this example aroute is created, just to show what is possible.\n\nsource\n\nroot\n\n root ()"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "fastapi-nbdev",
+    "section": "",
+    "text": "A small proof of concept FastaApi that shows how to create a really simple app with one route via the routers mechanism.\nIf there are any questions, do not hesitate to set up an issue 😊."
+  },
+  {
+    "objectID": "index.html#install",
+    "href": "index.html#install",
+    "title": "fastapi-nbdev",
+    "section": "Install",
+    "text": "Install\ngit clone https://github.com/MeesMolenaar/fastapi-nbdev.git"
+  },
+  {
+    "objectID": "index.html#running-the-application",
+    "href": "index.html#running-the-application",
+    "title": "fastapi-nbdev",
+    "section": "Running the Application",
+    "text": "Running the Application\nWhenever you change main, a route or add a route. You will have to run nbdev_export so that your package is updated.\n\nnbdev_export: Export notebooks in path to Python modules\n\nAfter running above comamand, you can start the FastAPI app with the following command from the root folder (i.e. fastapi-nbdev):\n\nuvicorn fastapi_nbdev.main:app –reload\n\nLastly, run nbdev_prepare. This is last, since you want to export and run your changes before running the tests.\n\nnbdev_prepare: Export, test, and clean notebooks, and render README if needed"
+  },
+  {
+    "objectID": "routers/aroute.html",
+    "href": "routers/aroute.html",
+    "title": "aRoute",
+    "section": "",
+    "text": "Here a APIRouter is created, which acts as a Router you can include to the main App 00_main.ipynb. This is a simple example to show you what the capabilities are. Click here, for more information on Router.\n\nsource\n\n\n\n aroute ()\n\n\n\n\nNow we want to test whether or not this route works as intented. We will use the request library to do this.\nNote: It is important that you run are running the app before you run the test!\n\nresponse = requests.get(f\"{localhost_url}/aroute\")\n\n\ntest_eq(response.status_code, 200)\ntest_eq(response.json(), {\"message\": \"Welcome in aroute!\"})"
+  },
+  {
+    "objectID": "routers/aroute.html#testing-aroute",
+    "href": "routers/aroute.html#testing-aroute",
+    "title": "aRoute",
+    "section": "",
+    "text": "Now we want to test whether or not this route works as intented. We will use the request library to do this.\nNote: It is important that you run are running the app before you run the test!\n\nresponse = requests.get(f\"{localhost_url}/aroute\")\n\n\ntest_eq(response.status_code, 200)\ntest_eq(response.json(), {\"message\": \"Welcome in aroute!\"})"
+  }
+]
